@@ -6,7 +6,7 @@ const Header = () => {
             <div>
                 <Image src="/logo.svg" alt="logo" width={128} height={27} />
             </div>
-            <div className="flex justify-around w-7/12">
+            <div className="hidden md:flex justify-around w-4/6 lg:w-3/6 text-sm lg:text-base">
                 <div>appダウンロード</div>
                 <div>開発について</div>
                 <div>お問い合わせ</div>
