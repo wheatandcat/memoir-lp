@@ -4,7 +4,7 @@ const Top = () => {
     return (
         <div className="flex flex-col sm:flex-row justify-center items-center py-10 px-3">
             <div>
-                <div className="text-4xl lg:text-6xl font-bold tracking-wide leading-tight">
+                <div className="text-4xl lg:text-6xl font-bold tracking-wide leading-tight ">
                     終わったタスク、
                     <br />
                     積み上げよう。
