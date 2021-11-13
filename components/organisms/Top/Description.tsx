@@ -1,10 +1,9 @@
-import Image from "next/image";
 import IconItem from "@components/molecules/Top/IconItem";
 
 const Description = () => {
     return (
-        <div className="flex p-10 my-8 bg-white-300 rounded-xl">
-            <div className="w-3/5">
+        <div className="flex flex-col md:flex-row p-10 my-8 bg-white-300 rounded-xl">
+            <div className="w-full md:w-3/5">
                 <div className="text-3xl leading-snug">
                     タスクを記録して可視化する、
                     <br />
@@ -20,7 +19,7 @@ const Description = () => {
                     実はたくさんのタスクをこなしていることが、きっとわかるはずです！
                 </div>
                 <div className="flex my-8">
-                    <div className="flex flex-col items-center w-2/5">
+                    <div className="flex flex-col items-center w-full md:w-2/5">
                         <IconItem
                             imagePath="/images/bell.png"
                             title={
@@ -39,7 +38,7 @@ const Description = () => {
                             }
                         />
                     </div>
-                    <div className="flex flex-col items-center w-2/5">
+                    <div className="flex flex-col items-center w-full md:w-2/5">
                         <IconItem
                             imagePath="/images/task.png"
                             title={
@@ -60,7 +59,7 @@ const Description = () => {
                     </div>
                 </div>
                 <div className="flex my-8">
-                    <div className="flex flex-col items-center w-2/5">
+                    <div className="flex flex-col items-center w-full md:w-2/5">
                         <IconItem
                             imagePath="/images/doc.png"
                             title={
@@ -79,7 +78,7 @@ const Description = () => {
                             }
                         />
                     </div>
-                    <div className="flex flex-col items-center w-2/5">
+                    <div className="flex flex-col items-center w-full md:w-2/5">
                         <IconItem
                             imagePath="/images/doc.png"
                             title={

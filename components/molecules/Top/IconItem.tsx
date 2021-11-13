@@ -1,10 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { ReactNode } from "react";
 
 type Props = {
     imagePath: string;
-    title: string;
-    description: string;
+    title: ReactNode;
+    description: ReactNode;
 };
 
 const IconItem: React.FC<Props> = (props) => {
