@@ -1,5 +1,4 @@
 import Image from "next/image";
-import IconItem from "@components/molecules/Top/IconItem";
 
 const Promotion = () => {
     return (

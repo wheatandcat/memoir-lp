@@ -1,5 +1,6 @@
 import Header from "@components/organisms/Header/Header";
 import Description from "@components/organisms/Top/Description";
+import Document from "@components/organisms/Top/Document";
 import Promotion from "@components/organisms/Top/Promotion";
 import Top from "@components/organisms/Top/Top";
 
@@ -10,6 +11,7 @@ const Page = () => {
             <Top />
             <Description />
             <Promotion />
+            <Document />
         </div>
     );
 };
