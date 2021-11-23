@@ -1,15 +1,16 @@
 .container {
-    padding: 0 2rem;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 0 1rem;
-    }
 }
 
 .main {
     min-height: 100vh;
+    padding: 0 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        min-height: 100vh;
+        padding: 0 1rem;
+    }
 }
 
 .base {
@@ -18,20 +19,28 @@
     padding: 0.75rem;
 }
 
-.footer {
-    display: flex;
-    flex: 1;
-    padding: 2rem 0;
-    border-top: 1px solid #eaeaea;
-    justify-content: center;
-    align-items: center;
+.header {
+    padding: 0 2rem;
 }
 
-.footer a {
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 1rem;
+    }
+}
+
+.footer {
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    background: #2b1f32;
+    color: #ffffff;
+    width: 100%;
+}
+
+.footer > div {
+    width: 80%;
 }
 
 .title a {

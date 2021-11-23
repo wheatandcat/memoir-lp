@@ -62,7 +62,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center mb-20 ml-8">
+                <div className="flex justify-center items-center mb-10 md:mb-20 ml-8">
                     <button className="py-2 px-4 w-40 font-bold text-white-300 bg-secondary-600 hover:bg-blue-700 rounded-xl">
                         送信
                     </button>

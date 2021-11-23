@@ -16,3 +16,66 @@ a {
 * {
     box-sizing: border-box;
 }
+
+blockquote {
+    position: relative;
+    box-sizing: border-box;
+}
+
+blockquote:before {
+    display: inline-block;
+    position: absolute;
+    content: "“";
+    font-family: "Cardo", serif;
+    font-size: 4rem;
+    top: -2rem;
+    left: -4rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #362740;
+}
+
+blockquote::after {
+    display: inline-block;
+    position: absolute;
+    content: "”";
+    font-family: "Cardo", serif;
+    font-size: 4rem;
+    bottom: -4rem;
+    right: -4rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #362740;
+}
+
+blockquote p {
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    blockquote:before {
+        display: inline-block;
+        position: absolute;
+        content: "“";
+        font-family: "Cardo", serif;
+        font-size: 3rem;
+        top: -2.5rem;
+        left: -0.5rem;
+        line-height: 1;
+        font-weight: 700;
+        color: #362740;
+    }
+
+    blockquote::after {
+        display: inline-block;
+        position: absolute;
+        content: "”";
+        font-family: "Cardo", serif;
+        font-size: 3rem;
+        bottom: -3rem;
+        right: -0.5rem;
+        line-height: 1;
+        font-weight: 700;
+        color: #362740;
+    }
+}
