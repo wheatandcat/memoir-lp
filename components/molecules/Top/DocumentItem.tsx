@@ -16,8 +16,8 @@ const DocumentItem: React.FC<Props> = (props) => {
                 <Image src={props.imagePath} alt="document-icon" width={props.imageSize} height={props.imageSize} />
             </div>
             <div className="flex flex-col justify-center items-start w-44">
-                <div className="text-lg sm:text-2xl">{props.title}</div>
-                <div className="hidden sm:block text-sm">
+                <div className="pl-4 text-base sm:text-2xl md:text-lg">{props.title}</div>
+                <div className="hidden sm:block pl-4 text-sm">
                     <a href={props.url}>{props.urlName}</a>
                 </div>
             </div>

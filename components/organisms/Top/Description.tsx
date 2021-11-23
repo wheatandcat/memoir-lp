@@ -2,14 +2,14 @@ import IconItem from "@components/molecules/Top/IconItem";
 
 const Description = () => {
     return (
-        <div className="flex flex-col md:flex-row p-10 my-8 bg-white-300 rounded-xl">
+        <div className="flex flex-col md:flex-row p-5 md:p-10 my-8 bg-white-300 rounded-xl">
             <div className="w-full md:w-3/5">
-                <div className="text-3xl leading-snug">
+                <div className="text-2xl md:text-3xl leading-snug">
                     タスクを記録して可視化する、
                     <br />
                     行動ログのメモアプリです。
                 </div>
-                <div className="py-5 text-sm leading-relaxed">
+                <div className="py-5 text-xs md:text-sm leading-relaxed">
                     「それで、今週何やったっけ」と思ったことはありませんか？
                     <br />
                     忙しく毎日を過ごしていると、細かいタスクはどんどん忘れられてしまいます。

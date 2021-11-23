@@ -21,7 +21,7 @@ const Document = () => {
                         title="開発ブログ"
                         urlName="https://www.wheatandcat.me/"
                         url="https://www.wheatandcat.me/"
-                        imageSize={50}
+                        imageSize={45}
                     />
                 </div>
             </div>
@@ -52,7 +52,7 @@ const Document = () => {
                         title="Expo"
                         urlName="https://expo.dev/@wheatandcat"
                         url="https://expo.dev/@wheatandcat/memoir"
-                        imageSize={55}
+                        imageSize={45}
                     />
                 </div>
                 <div className="flex justify-center items-center w-1/2 lg:w-1/3 h-20">
