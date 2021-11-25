@@ -64,7 +64,7 @@ const Description = () => {
                             imagePath="/images/doc.png"
                             title={
                                 <>
-                                    画像変換可能、
+                                    画像変換可能
                                     <br />
                                     物理で保管
                                 </>
@@ -83,7 +83,7 @@ const Description = () => {
                             imagePath="/images/doc.png"
                             title={
                                 <>
-                                    画像変換可能、
+                                    画像変換可能
                                     <br />
                                     物理で保管
                                 </>

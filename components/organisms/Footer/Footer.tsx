@@ -26,6 +26,52 @@ const service = {
     ],
 };
 
+const development = {
+    title: "Development",
+    linkItems: [
+        {
+            label: "GitHub",
+            url: "https://github.com/wheatandcat/memoir",
+        },
+        {
+            label: "Figma",
+            url: "https://www.figma.com/file/cLruhS5vc5IQsvqoXYSyP8/memoir?node-id=1149%3A379",
+        },
+        {
+            label: "Expo",
+            url: "https://expo.dev/@wheatandcat/memoir",
+        },
+    ],
+};
+
+const document = {
+    title: "Document",
+    linkItems: [
+        {
+            label: "Blog",
+            url: "https://www.wheatandcat.me/",
+        },
+    ],
+};
+
+const rules = {
+    title: "Rules",
+    linkItems: [
+        {
+            label: "memoirとは",
+            url: "",
+        },
+        {
+            label: "利用規約",
+            url: "",
+        },
+        {
+            label: "プライパシーポリシー",
+            url: "",
+        },
+    ],
+};
+
 const Footer = () => {
     return (
         <div>
@@ -34,20 +80,19 @@ const Footer = () => {
                     <Image src="/logo2.svg" alt="Logo" width={128} height={37} />
                 </span>
             </div>
-            <div className="flex justify-around">
-                <>
+            <div className="flex flex-wrap justify-start sm:justify-around mt-5">
                 <div>
                     <LinkItems {...download} />
                     <LinkItems {...service} />
                 </div>
                 <div>
-                    <LinkItems {...download} />
+                    <LinkItems {...development} />
                 </div>
                 <div>
-                    <LinkItems {...download} />
+                    <LinkItems {...document} />
                 </div>
                 <div>
-                    <LinkItems {...download} />
+                    <LinkItems {...rules} />
                 </div>
             </div>
         </div>

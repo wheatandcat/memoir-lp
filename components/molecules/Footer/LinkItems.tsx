@@ -12,11 +12,11 @@ type Props = {
 
 const LinkItems: React.FC<Props> = (props) => {
     return (
-        <div className="my-4 mx-16 leading-loose">
+        <div className="my-4 mx-8 sm:mx-16 leading-loose">
             <div>
-                <div className="text-lg">{props.title}</div>
+                <div className="text-xl">{props.title}</div>
             </div>
-            <div className="text-xs leading-7">
+            <div className="pt-2 text-sm leading-8">
                 {props.linkItems.map((v) => (
                     <div key={v.label}>{v.label}</div>
                 ))}
