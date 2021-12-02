@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Header = () => {
     return (
-        <div className="flex justify-between items-center pt-3">
+        <div className="container flex justify-between items-center pt-3 mx-auto">
             <div>
                 <Image src="/logo.svg" alt="logo" width={128} height={27} />
             </div>

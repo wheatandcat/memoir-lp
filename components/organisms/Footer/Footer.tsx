@@ -74,7 +74,7 @@ const rules = {
 
 const Footer = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <div>
                 <span className={styles.logo}>
                     <Image src="/logo2.svg" alt="Logo" width={128} height={37} />
