@@ -31,11 +31,13 @@ func PostInquiry(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 
 	var req struct {
-		Body   string `json:"body"`
-		Name   string `json:"name"`
-		Email  string `json:"email"`
-		Env    string `json:"env"`
-		UserID string `json:"userID"`
+		Body     string `json:"body"`
+		Name     string `json:"name"`
+		Email    string `json:"email"`
+		Env      string `json:"env"`
+		UserID   string `json:"userID"`
+		Device   string `json:"device"`
+		Category string `json:"category"`
 	}
 
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
@@ -71,6 +73,8 @@ func PostInquiry(w http.ResponseWriter, r *http.Request) {
 				req.Email,
 				req.Env,
 				req.UserID,
+				req.Device,
+				req.Category,
 				nowJST.Format("2006-01-02T15:04:05+09:00"),
 			},
 		},
