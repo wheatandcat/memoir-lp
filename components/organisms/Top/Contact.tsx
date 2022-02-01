@@ -6,7 +6,7 @@ const IMAGE_SCALE = 0.8;
 const Contact = () => {
     return (
         <div className="relative">
-            <div className="absolute bottom-0 left-0 lg:left-60">
+            <div className="hidden lg:block absolute bottom-0 left-0 lg:left-20 xl:left-60">
                 <Image
                     src="/images/contact01.svg"
                     alt="contact01"
@@ -15,7 +15,7 @@ const Contact = () => {
                     height={348 * IMAGE_SCALE}
                 />
             </div>
-            <div className="absolute right-0 lg:right-60 bottom-0">
+            <div className="hidden lg:block absolute right-0 lg:right-20 xl:right-60 bottom-0">
                 <Image
                     src="/images/contact02.svg"
                     alt="contact01"
