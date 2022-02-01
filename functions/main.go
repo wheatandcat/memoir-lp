@@ -9,11 +9,44 @@ import (
 	"os"
 	"time"
 
+	validation "github.com/go-ozzo/ozzo-validation"
+	"github.com/go-ozzo/ozzo-validation/v4/is"
 	"google.golang.org/api/option"
 	"google.golang.org/api/sheets/v4"
 )
 
 var spreadsheetID = os.Getenv("SPREADSHEET_ID")
+
+type Request struct {
+	Body     string `json:"body"`
+	Name     string `json:"name"`
+	Email    string `json:"email"`
+	Env      string `json:"env"`
+	UserID   string `json:"userID"`
+	Device   string `json:"device"`
+	Category string `json:"category"`
+}
+
+func (r Request) Validate() error {
+	return validation.ValidateStruct(&r,
+		validation.Field(
+			&r.Name,
+			validation.Required.Error("名前の入力は必須です"),
+			validation.RuneLength(1, 100).Error("名前は最大100文字までです"),
+		),
+		validation.Field(
+			&r.Email,
+			validation.Required.Error("Emailの入力は必須です"),
+			validation.RuneLength(1, 200).Error("ールアドレスは最大200文字までです"),
+			is.Email.Error("メールアドレスを入力して下さい"),
+		),
+		validation.Field(
+			&r.Body,
+			validation.Required.Error("本文の入力は必須です"),
+			validation.RuneLength(1, 2000).Error("本文は最大2000文字までです"),
+		),
+	)
+}
 
 func PostInquiry(w http.ResponseWriter, r *http.Request) {
 
@@ -30,17 +63,14 @@ func PostInquiry(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 
-	var req struct {
-		Body     string `json:"body"`
-		Name     string `json:"name"`
-		Email    string `json:"email"`
-		Env      string `json:"env"`
-		UserID   string `json:"userID"`
-		Device   string `json:"device"`
-		Category string `json:"category"`
-	}
+	var req Request
 
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	if err := req.Validate(); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
