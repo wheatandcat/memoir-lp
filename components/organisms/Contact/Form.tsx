@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useRouter } from "next/router";
 import { memo, useState, useCallback } from "react";
 import * as yup from "yup";
 
@@ -32,7 +33,10 @@ const schema = yup.object().shape({
     body: yup.string().required("本文の入力は必須です").max(2000, "本文は最大2000文字までです"),
 });
 
+const url = process.env.NEXT_PUBLIC_INQUIRY_API || "";
+
 const Form = () => {
+    const router = useRouter();
     const [loading, setLoading] = useState(false);
 
     const formik = useFormik<State>({
@@ -43,38 +47,41 @@ const Form = () => {
         },
     });
 
-    const postInquiry = useCallback(async (values: State) => {
-        const userAgent = navigator.userAgent.toLowerCase();
+    const postInquiry = useCallback(
+        async (values: State) => {
+            const userAgent = navigator.userAgent.toLowerCase();
 
-        setLoading(true);
+            setLoading(true);
 
-        const req: Request = {
-            body: values.body,
-            name: values.name,
-            email: values.email,
-            userID: "",
-            env: "LPサイト",
-            device: userAgent,
-            category: "LPお問い合わせ",
-        };
+            const req: Request = {
+                body: values.body,
+                name: values.name,
+                email: values.email,
+                userID: "",
+                env: "LPサイト",
+                device: userAgent,
+                category: "LPお問い合わせ",
+            };
 
-        const response = await fetch("https://asia-northeast1-memoir-review.cloudfunctions.net/PostInquiry", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(req),
-        });
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(req),
+            });
 
-        setLoading(false);
+            setLoading(false);
 
-        if (!response.ok) {
-            alert("送信に失敗しました");
-            return;
-        }
+            if (!response.ok) {
+                alert("送信に失敗しました");
+                return;
+            }
 
-        alert("送信しました");
-    }, []);
+            router.push(`/thanks?name=${values.name}`);
+        },
+        [router]
+    );
 
     return (
         <form onSubmit={formik.handleSubmit}>
