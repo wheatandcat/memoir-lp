@@ -3,13 +3,11 @@
 
 .main {
     min-height: 100vh;
-    padding: 0 2rem;
 }
 
 @media screen and (max-width: 768px) {
     .main {
         min-height: 100vh;
-        padding: 0 1rem;
     }
 }
 

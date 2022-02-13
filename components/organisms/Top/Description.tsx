@@ -1,9 +1,10 @@
+import Image from "next/image";
 import IconItem from "@components/molecules/Top/IconItem";
 
 const Description = () => {
     return (
-        <div className="flex flex-col md:flex-row p-5 md:p-10 my-8 bg-white-300 rounded-xl">
-            <div className="w-full md:w-3/5">
+        <div className="flex flex-row justify-center px-10 bg-white-600 rounded-xl">
+            <div className="mt-12 mb-1 w-full md:w-3/5">
                 <div className="text-2xl md:text-3xl leading-snug">
                     タスクを記録して可視化する、
                     <br />
@@ -18,88 +19,33 @@ const Description = () => {
                     <br />
                     実はたくさんのタスクをこなしていることが、きっとわかるはずです！
                 </div>
-                <div className="flex my-8">
-                    <div className="flex flex-col items-center w-full md:w-2/5">
+                <div className="my-8">
+                    <div className="flex items-center mb-8">
                         <IconItem
                             imagePath="/images/bell.png"
-                            title={
-                                <>
-                                    ふりかえり
-                                    <br />
-                                    リマインダー機能
-                                </>
-                            }
-                            description={
-                                <>
-                                    あなたはどんな
-                                    <br />
-                                    一週間を過ごしたでしょう？
-                                </>
-                            }
+                            title={<>ふりかえりリマインダー機能</>}
+                            description={<>あなたはどんな一週間を過ごしたでしょう？</>}
                         />
                     </div>
-                    <div className="flex flex-col items-center w-full md:w-2/5">
+                    <div className="flex items-center mb-8">
                         <IconItem
                             imagePath="/images/task.png"
-                            title={
-                                <>
-                                    ユーザー間で
-                                    <br />
-                                    タスク共有が可能
-                                </>
-                            }
-                            description={
-                                <>
-                                    かんたん共有、
-                                    <br />
-                                    非表示・解除もお手軽。
-                                </>
-                            }
+                            title={<>ユーザー間でタスク共有が可能</>}
+                            description={<>かんたん共有、非表示・解除もお手軽。</>}
                         />
                     </div>
-                </div>
-                <div className="flex my-8">
-                    <div className="flex flex-col items-center w-full md:w-2/5">
+                    <div className="flex items-center mb-8">
                         <IconItem
                             imagePath="/images/doc.png"
-                            title={
-                                <>
-                                    画像変換可能
-                                    <br />
-                                    物理で保管
-                                </>
-                            }
-                            description={
-                                <>
-                                    プリントアウトして
-                                    <br />
-                                    日記にペタリ！
-                                </>
-                            }
-                        />
-                    </div>
-                    <div className="flex flex-col items-center w-full md:w-2/5">
-                        <IconItem
-                            imagePath="/images/doc.png"
-                            title={
-                                <>
-                                    画像変換可能
-                                    <br />
-                                    物理で保管
-                                </>
-                            }
-                            description={
-                                <>
-                                    プリントアウトして
-                                    <br />
-                                    日記にペタリ！
-                                </>
-                            }
+                            title={<>画像変換可能、かんたんシェア</>}
+                            description={<>タスクを画像にして一覧化、SNSやブログ、日記アプリにペタリ！</>}
                         />
                     </div>
                 </div>
             </div>
-            <div className="w-2/5">画像</div>
+            <div className="pl-16 mt-5 w-2/5">
+                <Image src="/images/app_screen_01.svg" alt="app_screen" width={782 / 3} height={1584 / 3} />
+            </div>
         </div>
     );
 };

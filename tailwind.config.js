@@ -21,6 +21,9 @@ module.exports = {
                     900: "#B8B8B8",
                 },
             },
+            backgroundImage: {
+                "app-background": "url('/images/background.svg')",
+            },
         },
     },
     variants: {
