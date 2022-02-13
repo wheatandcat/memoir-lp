@@ -6,8 +6,8 @@ const Document = () => {
         <div className="flex flex-col justify-center items-center p-20 mb-8 bg-white-300">
             <div className="text-3xl leading-snug text-center">開発関連資料</div>
 
-            <div className="flex justify-center items-center my-5 w-full md:w-4/5 ">
-                <div className="flex flex-col justify-center items-center w-1/3">
+            <div className="flex flex-col sm:flex-row justify-center items-center my-5 w-full md:w-4/5 ">
+                <div className="flex flex-col justify-center items-center py-4 sm:py-0 sm:w-1/3">
                     <div className="py-3">Code & Design</div>
                     <div className="flex items-center">
                         <DocumentItem
@@ -31,7 +31,7 @@ const Document = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-center w-1/3">
+                <div className="flex flex-col justify-center items-center py-4 sm:py-0 sm:w-1/3">
                     <div className="py-3">Development log</div>
                     <div className="flex items-center">
                         <DocumentItem
@@ -57,7 +57,7 @@ const Document = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-center w-1/3">
+                <div className="flex flex-col justify-center items-center pt-4 sm:pt-0 sm:w-1/3">
                     <div className="py-3">MediaKit</div>
                     <div className="flex items-center">
                         <DocumentItem
