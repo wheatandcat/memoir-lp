@@ -3,13 +3,11 @@
 
 .main {
     min-height: 100vh;
-    padding: 0 2rem;
 }
 
 @media screen and (max-width: 768px) {
     .main {
         min-height: 100vh;
-        padding: 0 1rem;
     }
 }
 
@@ -129,4 +127,25 @@
         width: 100%;
         flex-direction: column;
     }
+}
+
+.section1 {
+    margin: 2rem 0;
+    padding: 5rem 3rem;
+    width: 100%;
+    clip-path: polygon(100% 0, 0 10%, 0 90%, 100% 100%);
+    background-color: #fff;
+}
+
+.section2 {
+    padding: 0 3rem;
+    width: 100%;
+}
+
+.section3 {
+    margin-top: 5rem;
+    padding: 5rem 3rem;
+    width: 100%;
+    clip-path: polygon(100% 0, 0 10%, 0 100%, 100% 100%);
+    background-color: #fff;
 }

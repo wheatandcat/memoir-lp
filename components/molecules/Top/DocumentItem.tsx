@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { Tooltip } from "@components/molecules/Tooltip/Tooltip";
 
 type Props = {
     imagePath: string;
@@ -12,14 +13,17 @@ type Props = {
 const DocumentItem: React.FC<Props> = (props) => {
     return (
         <>
-            <div className="flex justify-center items-center w-20">
-                <Image src={props.imagePath} alt="document-icon" width={props.imageSize} height={props.imageSize} />
-            </div>
-            <div className="flex flex-col justify-center items-start w-44">
-                <div className="pl-4 text-base sm:text-2xl md:text-lg">{props.title}</div>
-                <div className="hidden sm:block pl-4 text-sm">
-                    <a href={props.url}>{props.urlName}</a>
-                </div>
+            <div className="mx-2">
+                <Tooltip tooltipText={props.title}>
+                    <a href={props.url} aria-label={props.title} target="_blank" rel="noreferrer noopener">
+                        <Image
+                            src={props.imagePath}
+                            alt="document-icon"
+                            width={props.imageSize}
+                            height={props.imageSize}
+                        />
+                    </a>
+                </Tooltip>
             </div>
         </>
     );
