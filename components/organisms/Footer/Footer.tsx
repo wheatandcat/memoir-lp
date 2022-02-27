@@ -8,10 +8,12 @@ const download = {
         {
             label: "Apple Store",
             url: "",
+            app: false,
         },
         {
             label: "Play Store",
             url: "",
+            app: false,
         },
     ],
 };
@@ -22,6 +24,7 @@ const service = {
         {
             label: "ヘルプ",
             url: "",
+            app: false,
         },
     ],
 };
@@ -32,14 +35,17 @@ const development = {
         {
             label: "GitHub",
             url: "https://github.com/wheatandcat/memoir",
+            app: false,
         },
         {
             label: "Figma",
             url: "https://www.figma.com/file/cLruhS5vc5IQsvqoXYSyP8/memoir?node-id=1149%3A379",
+            app: false,
         },
         {
             label: "Expo",
             url: "https://expo.dev/@wheatandcat/memoir",
+            app: false,
         },
     ],
 };
@@ -50,6 +56,7 @@ const document = {
         {
             label: "Blog",
             url: "https://www.wheatandcat.me/",
+            app: false,
         },
     ],
 };
@@ -58,16 +65,14 @@ const rules = {
     title: "Rules",
     linkItems: [
         {
-            label: "memoirとは",
-            url: "",
-        },
-        {
             label: "利用規約",
-            url: "",
+            url: "/terms",
+            app: true,
         },
         {
             label: "プライパシーポリシー",
             url: "",
+            app: false,
         },
     ],
 };
