@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../../../styles/Home.module.css";
 import LinkItems from "@components/molecules/Footer/LinkItems";
 
@@ -71,8 +72,8 @@ const rules = {
         },
         {
             label: "プライパシーポリシー",
-            url: "",
-            app: false,
+            url: "/privacy",
+            app: true,
         },
     ],
 };
@@ -82,7 +83,11 @@ const Footer = () => {
         <div className="container mx-auto">
             <div>
                 <span className={styles.logo}>
-                    <Image src="/logo2.svg" alt="Logo" width={128} height={37} />
+                    <Link href="/" passHref>
+                        <a>
+                            <Image src="/logo2.svg" alt="Logo" width={128} height={37} />
+                        </a>
+                    </Link>
                 </span>
             </div>
             <div className="flex flex-wrap justify-start sm:justify-around mt-5">
