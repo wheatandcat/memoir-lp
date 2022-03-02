@@ -22,9 +22,11 @@ const LinkItems: React.FC<Props> = (props) => {
                 {props.linkItems.map((v) => {
                     if (v.app) {
                         return (
-                            <Link key={v.label} href={v.url} passHref>
-                                <a>{v.label}</a>
-                            </Link>
+                            <div key={v.label}>
+                                <Link href={v.url} passHref>
+                                    <a>{v.label}</a>
+                                </Link>
+                            </div>
                         );
                     }
 
