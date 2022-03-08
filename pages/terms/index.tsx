@@ -1,11 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import styles from "../../styles/Home.module.css";
 import Footer from "@components/organisms/Footer/Footer";
 import Header from "@components/organisms/Header/Header";
 import Page from "@components/templates/Terms/Page";
 
 const Thanks: NextPage = () => {
+    const router = useRouter();
+    const { app } = router.query;
+
     return (
         <div>
             <Head>
@@ -14,17 +18,21 @@ const Thanks: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <header className={styles.header}>
-                <Header />
-            </header>
+            {app !== "true" && (
+                <header className={styles.header}>
+                    <Header />
+                </header>
+            )}
 
             <main className={styles.main}>
                 <Page />
             </main>
 
-            <footer className={styles.footer}>
-                <Footer />
-            </footer>
+            {app !== "true" && (
+                <footer className={styles.footer}>
+                    <Footer />
+                </footer>
+            )}
         </div>
     );
 };
