@@ -37,7 +37,7 @@ func (r Request) Validate() error {
 		validation.Field(
 			&r.Email,
 			validation.Required.Error("Emailの入力は必須です"),
-			validation.RuneLength(1, 200).Error("ールアドレスは最大200文字までです"),
+			validation.RuneLength(1, 200).Error("メールアドレスは最大200文字までです"),
 			is.Email.Error("メールアドレスを入力して下さい"),
 		),
 		validation.Field(
