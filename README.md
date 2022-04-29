@@ -1,7 +1,7 @@
 # memoir LPサイト
 
-■ サイト
-https://memoir-lp.vercel.app/
+■ サイト <br/>
+https://www.memoir-app.dev/
 
 
 ## ローカル実行
