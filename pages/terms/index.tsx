@@ -25,7 +25,7 @@ const Thanks: NextPage = () => {
             )}
 
             <main className={styles.main}>
-                <Page />
+                <Page app={false} />
             </main>
 
             {app !== "true" && (

@@ -8,7 +8,7 @@ const Example = () => {
                 たとえば、 <br className="block sm:hidden" />
                 こんな使い方
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden sm:block w-full max-w-3xl">
                 <ExampleItem
                     title={
                         <>
@@ -31,6 +31,7 @@ const Example = () => {
                             さあ、完了したタスクの山を定期的に見返して、自分の努力を讃えましょう！
                         </>
                     }
+                    color="green"
                 />
                 <ExampleItem
                     title={
@@ -51,6 +52,7 @@ const Example = () => {
                             思い出したいときはmemoirにおまかせ！
                         </>
                     }
+                    color="red"
                 />
                 <ExampleItem
                     title={
@@ -77,6 +79,7 @@ const Example = () => {
                             わたしたちが代わりに登録しておきます。
                         </>
                     }
+                    color="blue"
                 />
             </div>
             <div className="block sm:hidden">

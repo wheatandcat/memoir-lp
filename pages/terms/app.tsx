@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Home.module.css";
 import Footer from "@components/organisms/Footer/Footer";
 import Header from "@components/organisms/Header/Header";
-import Page from "@components/templates/Privacy/Page";
+import Page from "@components/templates/Terms/Page";
 
 const Thanks: NextPage = () => {
     const router = useRouter();
@@ -18,21 +18,9 @@ const Thanks: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {app !== "true" && (
-                <header className={styles.header}>
-                    <Header />
-                </header>
-            )}
-
             <main className={styles.main}>
-                <Page app={false} />
+                <Page app={true} />
             </main>
-
-            {app !== "true" && (
-                <footer className={styles.footer}>
-                    <Footer />
-                </footer>
-            )}
         </div>
     );
 };
