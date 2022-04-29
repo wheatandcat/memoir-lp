@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Link as Scroll } from "react-scroll";
 
 const Header = () => {
     return (
@@ -13,8 +14,16 @@ const Header = () => {
             </div>
             <div className="hidden md:flex justify-around w-4/6 lg:w-3/6 text-sm lg:text-base">
                 <div>appダウンロード</div>
-                <div>開発について</div>
-                <div>お問い合わせ</div>
+                <div className="cursor-pointer">
+                    <Scroll to="development" smooth={true} duration={600} offset={-30}>
+                        開発について
+                    </Scroll>
+                </div>
+                <div className="cursor-pointer">
+                    <Scroll to="contact" smooth={true} duration={600} offset={-30}>
+                        お問い合わせ
+                    </Scroll>
+                </div>
                 <Link href="/privacy" passHref>
                     <a>プライバシーポリシー</a>
                 </Link>

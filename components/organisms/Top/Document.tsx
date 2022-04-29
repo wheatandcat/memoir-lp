@@ -4,7 +4,9 @@ import DocumentItem from "@components/molecules/Top/DocumentItem";
 const Document = () => {
     return (
         <div className="flex flex-col justify-center items-center p-20 mb-8 bg-white-300">
-            <div className="text-3xl leading-snug text-center">開発関連資料</div>
+            <div id="development" className="text-3xl leading-snug text-center">
+                開発関連資料
+            </div>
 
             <div className="flex flex-col sm:flex-row justify-center items-center my-5 w-full md:w-4/5 ">
                 <div className="flex flex-col justify-center items-center py-4 sm:py-0 sm:w-1/3">
@@ -57,17 +59,19 @@ const Document = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col justify-center items-center pt-4 sm:pt-0 sm:w-1/3">
-                    <div className="py-3">MediaKit</div>
-                    <div className="flex items-center">
-                        <DocumentItem
-                            imagePath="/images/media-kit.svg"
-                            title="メディアキット"
-                            urlName="https://www.wheatandcat.me/"
-                            url="https://www.wheatandcat.me/"
-                        />
+                {false && (
+                    <div className="flex flex-col justify-center items-center pt-4 sm:pt-0 sm:w-1/3">
+                        <div className="py-3">MediaKit</div>
+                        <div className="flex items-center">
+                            <DocumentItem
+                                imagePath="/images/media-kit.svg"
+                                title="メディアキット"
+                                urlName="https://www.wheatandcat.me/"
+                                url="https://www.wheatandcat.me/"
+                            />
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );

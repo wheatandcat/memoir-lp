@@ -86,7 +86,9 @@ const Form = () => {
     return (
         <form onSubmit={formik.handleSubmit}>
             <div className="flex z-10 flex-col justify-center items-center py-3 md:py-16 my-3">
-                <div className="mb-0 md:mb-6 text-3xl leading-snug text-center">お問い合わせ</div>
+                <div id="contact" className="mb-0 md:mb-6 text-3xl leading-snug text-center">
+                    お問い合わせ
+                </div>
                 <br />
                 <div className="px-4 sm:px-0 sm:mr-4 w-full sm:w-auto">
                     <div className="flex flex-col sm:flex-row sm:items-center my-5">
