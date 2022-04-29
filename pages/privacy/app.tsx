@@ -18,21 +18,9 @@ const Thanks: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {app !== "true" && (
-                <header className={styles.header}>
-                    <Header />
-                </header>
-            )}
-
             <main className={styles.main}>
-                <Page app={false} />
+                <Page app />
             </main>
-
-            {app !== "true" && (
-                <footer className={styles.footer}>
-                    <Footer />
-                </footer>
-            )}
         </div>
     );
 };
