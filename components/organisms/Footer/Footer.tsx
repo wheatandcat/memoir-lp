@@ -93,7 +93,7 @@ const Footer = () => {
             <div className="flex flex-wrap justify-start sm:justify-around mt-5">
                 <div>
                     <LinkItems {...download} />
-                    <LinkItems {...service} />
+                    {false && <LinkItems {...service} />}
                 </div>
                 <div>
                     <LinkItems {...development} />
