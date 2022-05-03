@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Meta from "components/molecules/Meta/Meta.tsx";
 
 class MyDocument extends Document {
     render() {
@@ -11,6 +12,7 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Roboto+Condensed:wght@400;700&display=swap"
                         rel="stylesheet"
                     />
+                    <Meta />
                 </Head>
                 <body>
                     <Main />
