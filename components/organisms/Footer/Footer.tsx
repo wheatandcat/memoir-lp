@@ -116,7 +116,7 @@ const Footer = () => {
                 <div className="w-1/2 sm:w-64">
                     <LinkItems {...document} />
                 </div>
-                <div className="sm:w-80 w-3/2">
+                <div className="w-2/3 sm:w-80">
                     <LinkItems {...rules} />
                 </div>
             </div>
