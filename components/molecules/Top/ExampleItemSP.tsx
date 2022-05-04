@@ -47,9 +47,13 @@ const ExampleItem: React.FC<Props> = () => {
                     <div className="py-1" />
                     誰がいつどんなタスクをやったか確認できれば、 相手の不安や心配はどんどん消えてしまうことでしょう！{" "}
                     <br />
-                    <div className="py-1" />
-                    おや？毎回文字を打って記録するのが面倒？ <br /> <div className="py-1" />
-                    ランチや昼休み、お散歩の時間など、ルーチンをカスタム登録することもできます。 <br />
+                    {false && (
+                        <>
+                            <div className="py-1" />
+                            おや？毎回文字を打って記録するのが面倒？ <br /> <div className="py-1" />
+                            ランチや昼休み、お散歩の時間など、ルーチンをカスタム登録することもできます。 <br />
+                        </>
+                    )}
                     <div className="py-1" />
                     時間になったら通知を飛ばしますので、タスクを完了したか教えてください。 <br />
                     <div className="py-1" />
