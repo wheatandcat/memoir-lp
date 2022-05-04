@@ -9,3 +9,6 @@ https://www.memoir-app.dev/
 ```zsh
 $ yarn dev
 ```
+
+# デザイン
+ - Icons by [Icons8](https://icons8.jp/)

@@ -51,6 +51,17 @@ const development = {
     ],
 };
 
+const design = {
+    title: "Design",
+    linkItems: [
+        {
+            label: "Icons8",
+            url: "https://icons8.jp/",
+            app: false,
+        },
+    ],
+};
+
 const document = {
     title: "Document",
     linkItems: [
@@ -90,18 +101,22 @@ const Footer = () => {
                     </Link>
                 </span>
             </div>
-            <div className="flex flex-wrap justify-start sm:justify-around mt-5">
-                <div>
+            <div className="flex flex-wrap justify-start sm:justify-start mt-5">
+                <div className="w-1/2 sm:w-64">
                     <LinkItems {...download} />
+
                     {false && <LinkItems {...service} />}
                 </div>
-                <div>
+                <div className="w-1/2 sm:w-64">
                     <LinkItems {...development} />
                 </div>
-                <div>
+                <div className="w-1/2 sm:w-64">
+                    <LinkItems {...design} />
+                </div>
+                <div className="w-1/2 sm:w-64">
                     <LinkItems {...document} />
                 </div>
-                <div>
+                <div className="sm:w-80 w-3/2">
                     <LinkItems {...rules} />
                 </div>
             </div>
