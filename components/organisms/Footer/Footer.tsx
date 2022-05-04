@@ -8,12 +8,12 @@ const download = {
     linkItems: [
         {
             label: "Apple Store",
-            url: "",
+            url: "https://apps.apple.com/jp/app/memoir/id1613532672",
             app: false,
         },
         {
-            label: "Play Store",
-            url: "",
+            label: "Google Play",
+            url: "https://play.google.com/store/apps/details?id=com.wheatandcat.memoir",
             app: false,
         },
     ],
