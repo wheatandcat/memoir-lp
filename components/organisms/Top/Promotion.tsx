@@ -15,10 +15,24 @@ const Promotion = () => {
 
             <div className="flex pt-10 mt-4">
                 <div className="mr-5">
-                    <Image src="/images/ios.svg" alt="iOS" width={180} height={50} />
+                    <a
+                        href="https://apps.apple.com/jp/app/memoir/id1613532672"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label="Apple Store"
+                    >
+                        <Image src="/images/ios.svg" alt="iOS" width={180} height={50} />
+                    </a>
                 </div>
                 <div>
-                    <Image src="/images/android.svg" alt="Android" width={180} height={50} />
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.wheatandcat.memoir"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label="Google Play"
+                    >
+                        <Image src="/images/android.svg" alt="Android" width={180} height={50} />
+                    </a>
                 </div>
             </div>
         </div>
