@@ -89,6 +89,17 @@ const rules = {
     ],
 };
 
+const supports = {
+    title: "Supports",
+    linkItems: [
+        {
+            label: "Ko-fi",
+            url: "https://ko-fi.com/memoir22983",
+            app: false,
+        },
+    ],
+};
+
 const Footer = () => {
     return (
         <div className="container mx-auto">
@@ -116,8 +127,11 @@ const Footer = () => {
                 <div className="w-1/2 sm:w-64">
                     <LinkItems {...document} />
                 </div>
-                <div className="w-2/3 sm:w-80">
+                <div className="w-1/2 sm:w-64">
                     <LinkItems {...rules} />
+                </div>
+                <div className="w-1/2 sm:w-64">
+                    <LinkItems {...supports} />
                 </div>
             </div>
         </div>

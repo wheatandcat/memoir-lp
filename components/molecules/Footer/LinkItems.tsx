@@ -24,7 +24,7 @@ const LinkItems: React.FC<Props> = (props) => {
                         return (
                             <div key={v.label}>
                                 <Link href={v.url} passHref>
-                                    <a>{v.label}</a>
+                                    <a className="text-xs">{v.label}</a>
                                 </Link>
                             </div>
                         );
