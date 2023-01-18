@@ -11,8 +11,10 @@
         "@react-hook/media-query": "^1.1.1",
         "formik": "^2.2.9",
         "next": "^12.1.5",
+        "next-remove-imports": "^1.0.8",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
+        "react-kofi-button": "^0.7.1",
         "react-scroll": "^1.8.7",
         "yup": "^0.32.11"
     },
@@ -26,6 +28,7 @@
         "eslint-plugin-tailwindcss": "^1.17.0",
         "postcss": "^8.3.11",
         "prettier": "^2.4.1",
+        "sass": "^1.57.1",
         "stylelint": "^14.0.1",
         "stylelint-config-prettier": "^9.0.3",
         "stylelint-prettier": "^2.0.0",

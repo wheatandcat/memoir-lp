@@ -1,6 +1,12 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { Link as Scroll } from "react-scroll";
+
+const KofiButton = dynamic(() => import("react-kofi-button/dist/KofiButton"), {
+    ssr: false,
+});
 
 const Header = () => {
     return (
@@ -27,6 +33,9 @@ const Header = () => {
                 <Link href="/privacy" passHref>
                     <a>プライバシーポリシー</a>
                 </Link>
+                <div>
+                    <KofiButton username="memoir22983" label="制作者に奢る" preset="skinny" backgroundColor="#F680B2" />
+                </div>
             </div>
         </div>
     );
