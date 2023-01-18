@@ -17,6 +17,7 @@
         "baseUrl": "./",
         "paths": {
             "@components/*": ["components/*"],
+            "@hooks/*": ["hooks/*"],
             "react-kofi-button/dist/KofiButton": ["@types/KofiButton.d.ts"]
         }
     },
