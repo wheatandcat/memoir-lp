@@ -1,14 +1,10 @@
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { memo, useCallback } from "react";
 import { Link as Scroll } from "react-scroll";
+import KofiButton from "@components/molecules/KofiButton/KofiButton";
 import useWindowSize from "hooks/useWindowSize";
-
-const KofiButton = dynamic(() => import("react-kofi-button/dist/KofiButton"), {
-    ssr: false,
-});
 
 const Header = () => {
     const { width } = useWindowSize();
@@ -28,10 +24,8 @@ const Header = () => {
     return (
         <div className="container flex justify-between items-center pt-3 mx-auto">
             <div>
-                <Link href="/" passHref>
-                    <a>
-                        <Image src="/logo.svg" alt="logo" width={128} height={27} />
-                    </a>
+                <Link href="/">
+                    <Image src="/logo.svg" alt="logo" width={128} height={27} />
                 </Link>
             </div>
             {router.pathname === "/" && (
@@ -48,22 +42,19 @@ const Header = () => {
                                 お問い合わせ
                             </Scroll>
                         </div>
-                        <Link href="/privacy" passHref>
-                            <a>プライバシーポリシー</a>
-                        </Link>
+                        <Link href="/privacy">プライバシーポリシー</Link>
 
                         <div>
                             <KofiButton
                                 username="memoir22983"
                                 label={label()}
-                                preset="thin"
                                 backgroundColor="#F680B2"
                             />
                         </div>
                     </div>
 
                     <div className="lg:hidden">
-                        <KofiButton username="memoir22983" label="支援する" preset="thin" backgroundColor="#F680B2" />
+                        <KofiButton username="memoir22983" label="支援する" backgroundColor="#F680B2" />
                     </div>
                 </>
             )}

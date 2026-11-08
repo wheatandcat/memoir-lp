@@ -23,8 +23,8 @@ const LinkItems: React.FC<Props> = (props) => {
                     if (v.app) {
                         return (
                             <div key={v.label}>
-                                <Link href={v.url} passHref>
-                                    <a className="text-xs">{v.label}</a>
+                                <Link href={v.url} className="text-xs">
+                                    {v.label}
                                 </Link>
                             </div>
                         );

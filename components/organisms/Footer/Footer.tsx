@@ -43,11 +43,6 @@ const development = {
             url: "https://www.figma.com/file/cLruhS5vc5IQsvqoXYSyP8/memoir?node-id=1149%3A379",
             app: false,
         },
-        {
-            label: "Expo",
-            url: "https://expo.dev/@wheatandcat/memoir",
-            app: false,
-        },
     ],
 };
 
@@ -105,10 +100,8 @@ const Footer = () => {
         <div className="container mx-auto">
             <div>
                 <span className={styles.logo}>
-                    <Link href="/" passHref>
-                        <a>
-                            <Image src="/logo2.svg" alt="Logo" width={128} height={37} />
-                        </a>
+                    <Link href="/">
+                        <Image src="/logo2.svg" alt="Logo" width={128} height={37} />
                     </Link>
                 </span>
             </div>
