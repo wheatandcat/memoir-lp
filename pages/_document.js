@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Meta from "components/molecules/Meta/Meta.tsx";
+import Meta from "@components/molecules/Meta/Meta";
 
 class MyDocument extends Document {
     render() {
@@ -9,7 +9,7 @@ class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Roboto+Condensed:wght@400;700&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Quicksand:wght@700&family=Roboto+Condensed:wght@400;700&display=swap"
                         rel="stylesheet"
                     />
                     <Meta />

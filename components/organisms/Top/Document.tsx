@@ -24,13 +24,6 @@ const Document = () => {
                             urlName="https://www.figma.com/file"
                             url="https://www.figma.com/file/cLruhS5vc5IQsvqoXYSyP8/memoir?node-id=1149%3A379"
                         />
-                        <DocumentItem
-                            imagePath="/images/expo.svg"
-                            title="Expo"
-                            urlName="https://expo.dev/@wheatandcat"
-                            url="https://expo.dev/@wheatandcat/memoir"
-                            imageSize={45}
-                        />
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center py-4 sm:py-0 sm:w-1/3">

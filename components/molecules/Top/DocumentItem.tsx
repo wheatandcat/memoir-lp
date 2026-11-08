@@ -10,7 +10,7 @@ type Props = {
     imageSize?: number;
 };
 
-const DocumentItem: React.FC<Props> = (props) => {
+const DocumentItem: React.FC<Props> = ({ imageSize = 65, ...props }) => {
     return (
         <>
             <div className="mx-2">
@@ -19,18 +19,14 @@ const DocumentItem: React.FC<Props> = (props) => {
                         <Image
                             src={props.imagePath}
                             alt="document-icon"
-                            width={props.imageSize}
-                            height={props.imageSize}
+                            width={imageSize}
+                            height={imageSize}
                         />
                     </a>
                 </Tooltip>
             </div>
         </>
     );
-};
-
-DocumentItem.defaultProps = {
-    imageSize: 65,
 };
 
 export default DocumentItem;
